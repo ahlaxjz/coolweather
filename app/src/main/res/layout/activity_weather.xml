@@ -1,0 +1,40 @@
+<FrameLayout
+    xmlns:andriod="http://schemas.android.com/apk/res/android"
+    andriod:layout_width="match_parent"
+    andriod:layout_height="match_parent"
+    andriod:background="@color/colorPrimary">
+
+    <ImageView
+        andriod:id="@+id/bing_pic_img"
+        andriod:layout_width="match_parent"
+        andriod:layout_height="match_parent"
+        andriod:scaleType="centerCrop" />
+
+    <ScrollView
+        andriod:id="@+id/weather_layout"
+        andriod:layout_width="match_parent"
+        andriod:layout_height="match_parent"
+        andriod:scrollbars="none"
+        andriod:overScrollMode="never">
+
+        <LinearLayout
+            andriod:orientation="vertical"
+            andriod:layout_width="match_parent"
+            andriod:layout_height="wrap_content"
+            andriod:firstSystemWindows="true">
+
+            <include layout="@layout/title" />
+
+            <include layout="@layout/now" />
+
+            <include layout="@layout/forecast" />
+
+            <include layout="@layout/aqi" />
+
+            <include layout="@layout/suggestion" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
