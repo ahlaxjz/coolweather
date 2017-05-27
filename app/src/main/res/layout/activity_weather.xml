@@ -10,31 +10,45 @@
         andriod:layout_height="match_parent"
         andriod:scaleType="centerCrop" />
 
-    <ScrollView
-        andriod:id="@+id/weather_layout"
+    <android.support.v4.widget.DrawerLayout
+        andriod:id="@+id/drawer_layout"
         andriod:layout_width="match_parent"
-        andriod:layout_height="match_parent"
-        andriod:scrollbars="none"
-        andriod:overScrollMode="never">
+        andriod:layout_height="match_parent">
 
-        <LinearLayout
-            andriod:orientation="vertical"
+        <android.support.v4.widget.SwipeRefreshLayout
+            andriod:id="@+id/swipe_refresh"
             andriod:layout_width="match_parent"
-            andriod:layout_height="wrap_content"
-            andriod:firstSystemWindows="true">
+            andriod:layout_height="match_parent">
 
-            <include layout="@layout/title" />
+            <ScrollView
+                andriod:id="@+id/weather_layout"
+                andriod:layout_width="match_parent"
+                andriod:layout_height="match_parent"
+                andriod:scrollbars="none"
+                andriod:overScrollMode="never">
 
-            <include layout="@layout/now" />
+                <LinearLayout
+                    andriod:orientation="vertical"
+                    andriod:layout_width="match_parent"
+                    andriod:layout_height="wrap_content"
+                    andriod:firstSystemWindows="true">
 
-            <include layout="@layout/forecast" />
+                    <include layout="@layout/title" />
 
-            <include layout="@layout/aqi" />
+                    <include layout="@layout/now" />
 
-            <include layout="@layout/suggestion" />
+                    <include layout="@layout/forecast" />
 
-        </LinearLayout>
+                    <include layout="@layout/aqi" />
 
-    </ScrollView>
+                    <include layout="@layout/suggestion" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </android.support.v4.widget.DrawerLayout>
 
 </FrameLayout>
